@@ -15,6 +15,14 @@ else
     exit 1
 fi
 
+# Check if the 'password' config option is set and not empty
+if bashio::config.has_value 'password'; then
+    bashio::log.debug 'Password config is not empty. Setting PASSWORD environment variable...'
+    export PASSWORD="$(bashio::config 'password')"
+else
+    bashio::log.debug 'No password set in configuration.'
+fi
+
 # Run fusion
 bashio::log.debug 'Running Fusion...'
 exec /usr/local/bin/fusion

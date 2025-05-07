@@ -13,6 +13,8 @@ ports_description:
   7080/tcp: Web interface
 init: false
 options:
+  password: ""
   log_level: "info"
 schema:
+  password: "password?"
   log_level: "list(debug|info|warn|error)"

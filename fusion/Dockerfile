@@ -28,7 +28,6 @@ COPY rootfs /
 
 # Set environment variables
 ENV PORT=7080
-ENV PASSWORD="fusion"
 ENV DB="/data/fusion.db"
 
 # Build arguments
