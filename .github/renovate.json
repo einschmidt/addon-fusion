@@ -20,10 +20,12 @@
       "customType": "regex",
       "fileMatch": ["/Dockerfile$"],
       "matchStrings": [
-        "ARG YARR_VERSION=[\"']?(?<currentValue>v[\\d.]+)[\"']?"
+        "ARG FUSION_VERSION=[\"']?(?<currentValue>v[\\d.]+)[\"']?"
       ],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "nkanaev/yarr"
+      "depNameTemplate": "0x2E/fusion",
+      "versioningTemplate": "semver",
+      "extractVersionTemplate": "v{{{version}}}"
     },
     {
       "customType": "regex",
