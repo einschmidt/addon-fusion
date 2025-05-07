@@ -14,4 +14,3 @@ Key features include:
 - Pre-built Docker image
 - Uses about 80MB of memory
 - Internationalization (i18n): English, Chinese, German, French, Spanish, Russian, Portuguese, and Swedish
-
