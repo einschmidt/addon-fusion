@@ -1,0 +1,20 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Add-on: fusion
+# Runs fusion
+# ==============================================================================
+
+bashio::log.info 'Starting fusion...'
+
+# Check if fusion binary exists
+if [ -f /usr/local/bin/fusion ]; then
+    bashio::log.debug 'Fusion binary found!'
+else
+    bashio::log.error 'Fusion binary not found at /usr/local/bin/fusion'
+    exit 1
+fi
+
+# Run fusion
+bashio::log.debug 'Running Fusion...'
+exec /usr/local/bin/fusion
